@@ -1,8 +1,8 @@
 import React from "react";
 
-function Container({
+function Container ({
   header,
-  children,
+  children: Components,
   textPosition = "", // possible values: left, right, center
   direction = "horizontal", // possible values: vertical, horizontal
   contentPosition = "center", // possible values: left, right, center
@@ -12,7 +12,7 @@ function Container({
       {header ? <h2>{header}</h2> : null}
 
       <div className={`container-children ${direction} ${contentPosition}`}>
-        {children}
+        {Components}
       </div>
     </div>
   );
